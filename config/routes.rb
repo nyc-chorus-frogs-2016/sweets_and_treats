@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
-  root 'welcome#index'
+  root 'restaurants#index'
   post 'search' => 'welcome#search'
   resources :users, only: [:new, :create, :show]
   resource :session, only: [:new, :create, :destroy]
+  resources :restaurants, only: [:index, :new, :create, :show, :edit, :update] do
+    resources :reviews, only: [:new, :create, :edit, :update, :destroy]
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

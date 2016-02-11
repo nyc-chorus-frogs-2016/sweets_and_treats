@@ -7,10 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header>
-    <h1><a href="">Sweets &amp Treats</a></h1>
-    <nav>
-      <ul>
+  <header class='main-header'>
+    <nav class='container'>
+      <h1 class='name'><%= link_to 'Sweets & Treats', root_path%></h1>
+      <ul class='main-nav'>
+        <li><%= form_tag '/search' do %>
+            <%= text_field_tag :q %>
+            <%= submit_tag 'Search' %>
+          <% end %>
+        </li>
         <li><%= link_to 'Home', root_path %></li>
         <% if current_user %>
           <li>Welcome, <%= link_to current_user.username, user_path(current_user) %></li>
