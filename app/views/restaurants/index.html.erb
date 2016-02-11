@@ -1,0 +1,11 @@
+<section id="rest-list">
+  <h2>Find your favorite sweet treat near you!</h2>
+  <% @categories.each do |category| %>
+    <section class='rest-cat'>
+      <h3><%= category.name%></h3>
+      <% category.restaurants.each do |restaurant| %>
+        <p><%= link_to restaurant.name, restaurant%></p>
+      <% end %>
+    </section>
+  <% end %>
+</section>
