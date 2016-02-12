@@ -1,0 +1,82 @@
+/* =================================
+  Base Styles
+==================================== */
+
+
+body {
+  margin: 0 auto;
+  background-image: image-url("background.jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: fixed;
+}
+
+a {
+  text-decoration: none;
+  color: #3acec2;
+}
+
+a:hover {
+  color: #093a58;
+}
+/* =================================
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+.name {
+  font-size: 1.25em;
+}
+.main-nav {
+  list-style: none;
+  display: inline;
+}
+
+.name,
+.main-nav li {
+  text-align: center;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.name a, .main-nav a {
+  font-size: .95em;
+  text-transform: uppercase;
+}
+
+
+.name a,
+.main-nav a {
+  padding: 10px 15px;
+  display: block;
+}
+
+/* ---- Layout Containers ---- */
+
+.container {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.main-header {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  margin-bottom: 30px;
+}
+
+.main-footer {
+  text-align: center;
+  padding: 2em 0;
+  background: #d9e4ea;
+}
+
+
+.rest-cat {
+  width: 45%;
+  float: left;
+}
+
+#rest-list, #rest-info {
+  text-align: center;
+}

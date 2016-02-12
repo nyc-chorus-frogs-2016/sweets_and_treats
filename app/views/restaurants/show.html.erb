@@ -1,0 +1,9 @@
+<section id='rest-info'>
+  <h2><%=@name%></h2>
+  <section>
+    <% @address.each do |a| %>
+      <p><%= a %></p>
+    <% end %>
+    <p><% @phone %></p>
+  </section>
+</section>
